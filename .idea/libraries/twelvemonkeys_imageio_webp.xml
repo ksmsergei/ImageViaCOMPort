@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="twelvemonkeys.imageio.webp" type="repository">
+    <properties maven-id="com.twelvemonkeys.imageio:imageio-webp:3.11.0" />
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/imageio-webp-3.11.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/imageio-core-3.11.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/imageio-metadata-3.11.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/common-lang-3.11.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/common-io-3.11.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/common-image-3.11.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

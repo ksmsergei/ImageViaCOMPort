@@ -1,0 +1,108 @@
+JFDML JFormDesigner: "8.2.4.0.393" Java: "21.0.3" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {comp pnlOptions:::::x, seq l {comp pnlImage::::537:x, space :::p}}"
+			"$verticalGroup": "par l {seq l {comp pnlImage::::420:x, space :::p, comp pnlOptions:::p::p}}"
+		} ) {
+			name: "this"
+			"defaultCloseOperation": 3
+			"title": "ImageViaCOMPort"
+			add( new FormComponent( "com.ksm.imgtouart.gui.other.JImagePanel" ) {
+				name: "pnlImage"
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+				"$horizontalGroup": "par l {seq l {space :::p, comp lblThreshold:::p::p, space :::p, comp slrThreshold:::p:255:p, space :::p, comp snrThreshold:::p:48:p, space u:::p, comp cbInverse:::p::p, space ::9:x}}"
+				"$verticalGroup": "par l {seq t {space :0:7:x, par t:::p {par b:t {comp snrThreshold::b:::x, comp cbInverse::b:p::p}, comp slrThreshold::t:::x, comp lblThreshold::t:::x}, space :p:8:p}}"
+			} ) {
+				name: "pnlOptions"
+				"border": new javax.swing.border.MatteBorder( 1, 0, 0, 0, sfield java.awt.Color black )
+				add( new FormComponent( "javax.swing.JSlider" ) {
+					name: "slrThreshold"
+					"maximum": 255
+					"majorTickSpacing": 1
+					"value": 127
+					"enabled": false
+					addEvent( new FormEvent( "javax.swing.event.ChangeListener", "stateChanged", "slrThresholdStateChanged", true ) )
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "lblThreshold"
+					"text": "Binarization threshold:"
+				} )
+				add( new FormComponent( "javax.swing.JSpinner" ) {
+					name: "snrThreshold"
+					"model": new javax.swing.SpinnerNumberModel( 127, 0, 255, 1 )
+					"enabled": false
+					addEvent( new FormEvent( "javax.swing.event.ChangeListener", "stateChanged", "snrThresholdStateChanged", true ) )
+				} )
+				add( new FormComponent( "javax.swing.JCheckBox" ) {
+					name: "cbInverse"
+					"text": "Inversed"
+					"enabled": false
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "cbInverse", true ) )
+				} )
+			} )
+			menuBar: new FormContainer( "javax.swing.JMenuBar", new FormLayoutManager( class javax.swing.JMenuBar ) ) {
+				name: "menuBar1"
+				add( new FormContainer( "javax.swing.JMenu", new FormLayoutManager( class javax.swing.JMenu ) ) {
+					name: "mFile"
+					"text": "File"
+					"mnemonic": 70
+					add( new FormComponent( "javax.swing.JMenuItem" ) {
+						name: "miOpenFile"
+						"text": "Open File"
+						"icon": new com.jformdesigner.model.SwingIcon( 0, "/res/folder.png" )
+						"mnemonic": 70
+						"accelerator": static javax.swing.KeyStroke getKeyStroke( 79, 130, false )
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "miOpenFile", true ) )
+					} )
+					add( new FormComponent( "javax.swing.JMenuItem" ) {
+						name: "miLoadURL"
+						"text": "Load URL"
+						"icon": new com.jformdesigner.model.SwingIcon( 0, "/res/earth.png" )
+						"accelerator": static javax.swing.KeyStroke getKeyStroke( 76, 130, false )
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "miLoadURL", true ) )
+					} )
+				} )
+				add( new FormContainer( "javax.swing.JMenu", new FormLayoutManager( class javax.swing.JMenu ) ) {
+					name: "mCOM"
+					"text": "COM"
+					"mnemonic": 67
+					add( new FormComponent( "javax.swing.JMenuItem" ) {
+						name: "miOptions"
+						"text": "Options"
+						"icon": new com.jformdesigner.model.SwingIcon( 0, "/res/applications.png" )
+						"accelerator": static javax.swing.KeyStroke getKeyStroke( 79, 65, false )
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "miOptions", true ) )
+					} )
+					add( new FormComponent( "javax.swing.JMenuItem" ) {
+						name: "miSend"
+						"text": "Send Image"
+						"icon": new com.jformdesigner.model.SwingIcon( 0, "/res/arrow.png" )
+						"accelerator": static javax.swing.KeyStroke getKeyStroke( 83, 130, false )
+						"enabled": false
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "miSend", true ) )
+					} )
+				} )
+				add( new FormContainer( "javax.swing.JMenu", new FormLayoutManager( class javax.swing.JMenu ) ) {
+					name: "mTools"
+					"text": "Tools"
+					"mnemonic": 84
+					add( new FormComponent( "javax.swing.JMenuItem" ) {
+						name: "miGenerateCode"
+						"text": "Generate C Code"
+						"accelerator": static javax.swing.KeyStroke getKeyStroke( 71, 130, false )
+						"icon": new com.jformdesigner.model.SwingIcon( 0, "/res/modify.png" )
+						"enabled": false
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "miGenerateCode", true ) )
+					} )
+				} )
+			}
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 0 )
+			"size": new java.awt.Dimension( 545, 520 )
+		} )
+	}
+}
